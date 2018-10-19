@@ -1,0 +1,351 @@
+
+Source 
+In paper or not
+Proust:
+
+
+Du côté de chez swan
+Http://www.gutenberg.org/ebooks/search/?Query=proust
+Yes 
+A l'ombre des jeunes filles en fleurs
+
+Http://www.gutenberg.org/ebooks/search/?Query=proust
+Yes 
+Le côté de guermantes
+Http://www.gutenberg.org/ebooks/search/?Query=proust
+No 
+Sodome et gomorrhe
+Http://www.gutenberg.org/ebooks/search/?Query=proust
+No 
+
+
+
+Mémoires d'outre-tombe
+Http://www.gutenberg.org/ebooks/search/?Query=proust
+No 
+Martin Du Gard
+
+
+Les Thibault
+https://archive.org/stream/lesthibault01martuoft/lesthibault01martuoft_djvu.txt
+Yes 
+Paul claudel:
+
+
+L'otage: drame en trois actes
+Http://www.gutenberg.org/ebooks/51012
+No 
+Le pain dur: drame en trois actes
+Http://www.gutenberg.org/ebooks/search/?Query=claudel
+No 
+Paul Bourget:
+
+
+Nos Actes Nous Suivlant
+Not found 
+
+Colette: 
+
+
+Claudine à l'école
+Https://fr.wikisource.org/wiki/claudine_%c3%a0_l%e2%80%99%c3%89cole/texte_entier
+Yes 
+Dialogues de betes
+Https://archive.org/stream/septdialoguesdeb00cole/septdialoguesdeb00cole_djvu.txt
+Yes 
+La maison de claudine
+Http://www.gutenberg.org/ebooks/14397
+Yes 
+La naissance du jour
+Https://www.ebooksgratuits.com/pdf/colette_naissance_du_jour.pdf
+Yes 
+Sido
+Https://www.amazon.fr/sido-sidonie-gabrielle-colette/dp/2253005231/ref=sr_1_1?S=books&ie=utf8&qid=1528016119&sr=1-1&keywords=colette+sido
+
+Yes 
+Splendeur des papillons ‎
+Https://www.livre-rare-book.com/search/current.seam?Reference=&author=colette&title=splendeur+des+papillons&description=&keywords=&keycodes=&isbn=&minimumprice=0.0&maximumprice=100000.0&minimumyear=0&maximumyear=0&sorting=relevance&booktype=all&agefilter=all&century=all&l=fr&actionmethod=search%2fcurrent.xhtml%3asearchengine.initsearch
+Not free,
+Yes 
+La chatte
+
+Http://www.bouquineux.com/index.php?Telecharger=1673&colette-la_chatte
+Yes
+Gaston Leroux
+
+
+
+Rouletabille chez le Tsar
+Not found 
+https://fr.wikisource.org/wiki/Rouletabille_chez_le_Tsar
+
+Yes 
+Vogüé
+
+
+Les morts qui parlent
+https://archive.org/stream/lesmortsquiparle00vog/lesmortsquiparle00vog_djvu.txt
+
+messy code
+Yes 
+Giono:
+
+
+Colline
+Https://www.amazon.fr/colline-jean-giono/dp/2253002895/ref=sr_1_4?S=books&ie=utf8&qid=1528038836&sr=1-4&keywords=giono
+Yes 
+Un de baumugnes
+Https://www.amazon.fr/baumugnes-jean-giono/dp/2253010847/ref=sr_1_10?S=books&ie=utf8&qid=1528038880&sr=1-10&keywords=giono
+Yes 
+Montherlant:
+
+
+Le demon du bien
+Not found 
+
+Les bestiaires
+Not found
+
+Pitie pour les
+Femmes
+Not found
+
+Les celibatairesrt
+Not found
+
+Les lepreuses
+Not found
+
+Simon de beauviour:
+
+
+Les mandrains
+Https://www.amazon.fr/mandarins-1-simone-beauvoir/dp/207036769x/ref=sr_1_9?S=books&ie=utf8&qid=1528016326&sr=1-9&keywords=beauvoir
+
+Yes 
+Celine:
+
+
+Voyage au bout de la nuit
+Https://www.amazon.fr/voyage-bout-nuit-louis-ferdinand-c%c3%a9line/dp/2070360288/ref=sr_1_1?S=books&ie=utf8&qid=1528016691&sr=1-1&keywords=celine
+
+Yes 
+Mort a credit
+Https://www.amazon.fr/mort-%c3%a0-cr%c3%a9dit-louis-ferdinand-c%c3%a9line/dp/2070376923/ref=sr_1_2?S=books&ie=utf8&qid=1528016536&sr=1-2&keywords=celine
+
+Yes 
+Satre:
+
+
+La mort dans l'âme
+Https://www.amazon.fr/mort-dans-l%c3%a2me-chemins-libert%c3%a9/dp/207036058x/ref=sr_1_2?S=books&ie=utf8&qid=1528016950&sr=1-2&keywords=sartre+les+mort
+
+
+Yes 
+Maxence-meersch:
+
+
+Invasion  14
+Https://www.amazon.fr/invasion-nouvelle-2014-maxence-meersch/dp/2226259856/ref=sr_1_1?S=books&ie=utf8&qid=1528016586&sr=1-1&keywords=invasion+14
+
+Yes 
+Gide:
+
+
+Li.si aux-monnayeurs  
+Https://www.amazon.fr/faux-monnayeurs-andr%c3%a9-gide/dp/2070368793/ref=sr_1_2?S=books&ie=utf8&qid=1528017124&sr=1-2&keywords=gide+les
+
+Yes 
+Verne:
+
+
+L'lli mvsterieuse
+Http://www.gutenberg.org/ebooks/search/?Query=verne+
+Yes 
+Malegue: 
+
+
+Augustin ou le maître est là
+Https://www.amazon.fr/augustin-ou-ma%c3%aetre-est-l%c3%a0/dp/2204101923/ref=sr_1_2?S=books&ie=utf8&qid=1528017187&sr=1-2&keywords=malegue
+
+Yes 
+Larbaud:
+
+
+A o barnabooth
+Https://www.amazon.fr/po%c3%a9sies-barnabooth-diverses/dp/2070301575/ref=sr_1_2?S=books&ie=utf8&qid=1528016874&sr=1-2&keywords=larbaud
+
+Yes
+Gobineau:
+
+
+Novelles asiatiques
+Https://www.amazon.fr/nouvelles-asiatiques-arthur-gobineau/dp/2070438791/ref=sr_1_5?S=books&ie=utf8&qid=1528016786&sr=1-5&keywords=gobineau
+
+Yes
+Giraudoux:
+
+
+Simon le pathetique
+https://ebooks-bnr.com/ebooks/pdf4/giraudoux_simon_le_pathetique.pdf
+Yes
+Suzanne et le pacifique
+Http://bibliothequenumerique.tv5monde.com/livre/405/suzanne-et-le-pacifique
+Yes
+Zola:
+
+
+Nana:
+Http://bibliothequenumerique.tv5monde.com/livre/201/nana
+Yes 
+L'assommoir:
+Http://bibliothequenumerique.tv5monde.com/recherche/livres
+Yes
+La bete humain
+Http://bibliothequenumerique.tv5monde.com/recherche/livres
+Yes 
+La conquête de plassans
+Http://bibliothequenumerique.tv5monde.com/recherche/livres
+Yes 
+L'argent
+Http://bibliothequenumerique.tv5monde.com/recherche/livres
+Yes 
+Le debacle 
+Http://bibliothequenumerique.tv5monde.com/recherche/livres
+Yes 
+Au bonheur des dames:
+Http://bibliothequenumerique.tv5monde.com/recherche/livres
+Yes
+Bernanos:
+
+
+Nouvelle histoire de mouchette
+Https://beq.ebooksgratuits.com/classiques/bernanos_nouvelle_histoire_de_mouchette.pdf
+Yes
+Une nuit
+Not found 
+Yes
+Louis pergaud 
+Https://beq.ebooksgratuits.com/vents/pergaud-goupil.pdf
+Yes 
+La guerre des boutons
+Http://www.gutenberg.org/ebooks/56646
+No 
+Jules renard:
+
+
+Poil de carotte
+Http://www.gutenberg.org/ebooks/4559
+Yes 
+Maupassant:
+
+
+Contes et nouvelles 
+Https://www.amazon.fr/tous-contes-nouvelles-maupassant-augment%c3%a9e-ebook/dp/b00ret2ddw/ref=sr_1_7?S=books&ie=utf8&qid=1528070682&sr=1-7&keywords=contes+et+nouvelles+maupassant 
+Yes 
+Contes de la bécasse 
+http://bibliothequenumerique.tv5monde.com/recherche/livres
+No 
+Bel ami 
+http://bibliothequenumerique.tv5monde.com/recherche/livres
+No 
+Boule de suif 
+http://bibliothequenumerique.tv5monde.com/recherche/livres
+No 
+Le horla 
+http://bibliothequenumerique.tv5monde.com/recherche/livres
+No 
+Les contes du jour et de la nuit
+http://bibliothequenumerique.tv5monde.com/recherche/livres
+No 
+La maison tellier - une partie de campagne 
+http://bibliothequenumerique.tv5monde.com/recherche/livres
+No 
+Une vie 
+http://bibliothequenumerique.tv5monde.com/recherche/livres
+No 
+Huysmans:
+      
+
+
+La bas
+Https://www.amazon.fr/l%c3%a0-bas-joris-karl-huysmans/dp/2070376818/ref=sr_1_2?Ie=utf8&qid=1528015981&sr=8-2&keywords=huysmans
+
+
+Yes 
+Loti:
+
+
+
+Le marriage de loti
+
+
+Yes 
+Breton:
+
+
+Nadja 
+Https://www.amazon.fr/nadja-andr%c3%a9-breton/dp/2070360733/ref=sr_1_4?S=books&ie=utf8&qid=1528016260&sr=1-4&keywords=breton
+
+Yes 
+Farrere:
+
+
+
+L'homme oui assassina
+Http://www.gutenberg.org/ebooks/48432
+Yes 
+Van der meer
+
+
+Yes 
+Sagan:
+
+
+
+
+Bonjour tristisse
+
+Https://www.amazon.fr/bonjour-tristesse-fran%c3%a7oise-sagan/dp/2266195581/ref=sr_1_1?S=books&ie=utf8&qid=1528016191&sr=1-1&keywords=sagan
+
+Yes 
+
+
+
+Duhamel:
+
+
+Les maitres 
+Not found 
+Yes 
+
+
+
+Hugo :
+
+No 
+L'ane (1881)
+Http://www.gutenberg.org/ebooks/search/?Query=hugo
+No 
+L'année terrible (1871)
+Http://www.gutenberg.org/ebooks/search/?Query=hugo
+No 
+L'art d'être grand-père (1877)
+Http://bibliothequenumerique.tv5monde.com/recherche/livres
+
+Chateaubriand:
+
+
+Atala 
+Http://bibliothequenumerique.tv5monde.com/recherche/livres
+No 
+Les aventures du dernier abencerage
+Http://bibliothequenumerique.tv5monde.com/recherche/livres
+No
+Rene 
+Http://bibliothequenumerique.tv5monde.com/recherche/livres
+No 
+Mémoires d'outre-tombe
+Http://www.gutenberg.org/ebooks/search/?Query=chateaubriand
+No 
+
