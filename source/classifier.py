@@ -5,39 +5,51 @@ import re
 import numpy as np
 import matplotlib.pyplot as plt
 
+from collections import Counter
 from sklearn import metrics
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 
+from document import Document
+
+FUNCTION_WORD_POS = [
+'DET:ART',
+'DET:POS',
+'INT',
+'KON',
+'PRO',
+'PRO:DEM',
+'PRO:IND',
+'PRO:PER',
+'PRO:POS',
+'PRO:REL',
+'PRP',
+'PRP:det',
+]
+
 
 def load_data():
+    print('loading data...')
     file_paths = [f for f in glob.glob("../data/*.txt")]
     data = {}
     for path in file_paths:
         file = open(path , "rb")
+        print('pickling ', path, '...')
         data[os.path.basename(path)] = pickle.load(file)
         file.close()
+    print('done loading data.')
     return data
 
 
-# this is terrifying code, there ought to be a better way to split these lists into 500 word segments
-def segment_data(input_data_dict):
-    labels, processed_data = [], []
+def generate_documents(input_data_dict):
+    documents = []
     for file_path, tag_list in input_data_dict.items():
         label = get_label_from_file_path(file_path)
-        string = ''
-        for i, tag in enumerate(tag_list):
-            string += tag.lemma + ' '
-            if i % 500 == 0:
-                labels.append(label)
-                processed_data.append(string)
-                string = ''
-        labels.append(label)
-        processed_data.append(string)
-    return labels, processed_data
+        documents.extend([Document(label, tag_list[x:x+1000]) for x in range(0, len(tag_list), 1000)])
+    return documents
 
 
 def get_label_from_file_path(file_path):
@@ -65,23 +77,43 @@ def plot_coefficients(classifier, feature_names, top_features=20):
     plt.show()
 
 
-if __name__ == "__main__":
+def features(tags_list):
+    features = []
+    for tags in tags_list:
+        features.append(relative_function_word_feature(tags))
+    return features
+
+
+def relative_function_word_feature(tags):
+    function_words = [tag.lemma for tag in tags if tag.pos in FUNCTION_WORD_POS]
+    word_counts = dict(Counter(function_words))
+    relative_word_counts = {word: word_counts[word] / len(function_words)
+                            for word in word_counts.keys()}
+    return relative_word_counts
+
+
+def main():
 
     book_data_dict = load_data()
-    labels, processed_data = segment_data(book_data_dict)
+    documents = generate_documents(book_data_dict)
 
     text_classifier = Pipeline([
-        ('vect', CountVectorizer(ngram_range=(1, 2))),
+        ('vect', DictVectorizer()),
         ('tfidf', TfidfTransformer()),
         ('clf', SGDClassifier(random_state=42, penalty='l1'))
     ])
 
-    X_train, X_test, y_train, y_test = train_test_split(processed_data, labels, test_size=0.20)
+    labels = [doc.label for doc in documents]
+    X = [doc.tag_list for doc in documents]
+    X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.20)
 
-    text_classifier.fit(X_train, y_train)
-    predicted = text_classifier.predict(X_test)
+    text_classifier.fit(features(X_train), y_train)
+    predicted = text_classifier.predict(features(X_test))
     np.mean(predicted == y_test)
     print(metrics.classification_report(y_test, predicted))
     plot_coefficients(text_classifier.named_steps['clf'],
                       text_classifier.named_steps['vect'].get_feature_names())
 
+
+if __name__ == "__main__":
+    main()
