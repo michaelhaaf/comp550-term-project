@@ -1,14 +1,12 @@
-import classifier
+from unittest import TestCase
+from features import FunctionWordFeature
 import treetaggerwrapper
 
-from unittest import TestCase
-
-
-class TestClassifier(TestCase):
+class TestFunctionWordFeature(TestCase):
     tagger = treetaggerwrapper.TreeTagger(TAGLANG='fr')
 
-    def test_relative_function_word_feature(self):
+    def test_apply_gives_correct_relative_values_for_function_words_in_sentence(self):
         tags = treetaggerwrapper.make_tags(
             self.tagger.tag_text('ceci est un texte très court à taguer, et un mot apparaît deux fois'))
-        result = classifier.relative_function_word_feature(tags)
+        result = FunctionWordFeature().apply(tags)
         self.assertEqual({'ceci': 1/5, 'un': 2/5, 'à': 1/5, 'et': 1/5}, result)

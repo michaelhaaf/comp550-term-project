@@ -1,11 +1,6 @@
-import glob
-import pickle
-import os
-import re
 import numpy as np
 import matplotlib.pyplot as plt
 
-from collections import Counter
 from sklearn import metrics
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
@@ -13,25 +8,9 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 
-from document_handler import Document
 from data_utilities import load_preprocessed_data
 from document_handler import DocumentFactory
-
-FUNCTION_WORD_POS = [
-'DET:ART',
-'DET:POS',
-'INT',
-'KON',
-'PRO',
-'PRO:DEM',
-'PRO:IND',
-'PRO:PER',
-'PRO:POS',
-'PRO:REL',
-'PRP',
-'PRP:det',
-]
-
+from features import FunctionWordFeature
 
 # code borrowed from https://medium.com/@aneesha/visualising-top-features-in-linear-svm-with-scikit-learn-and-matplotlib-3454ab18a14d
 def plot_coefficients(classifier, feature_names, top_features=20):
@@ -53,16 +32,8 @@ def plot_coefficients(classifier, feature_names, top_features=20):
 def features(tags_list):
     features = []
     for tags in tags_list:
-        features.append(relative_function_word_feature(tags))
+        features.append(FunctionWordFeature().apply(tags))
     return features
-
-
-def relative_function_word_feature(tags):
-    function_words = [tag.lemma for tag in tags if tag.pos in FUNCTION_WORD_POS]
-    word_counts = dict(Counter(function_words))
-    relative_word_counts = {word: word_counts[word] / len(function_words)
-                            for word in word_counts.keys()}
-    return relative_word_counts
 
 
 def main():
