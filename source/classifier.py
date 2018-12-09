@@ -13,7 +13,9 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 
-from document import Document
+from document_handler import Document
+from data_utilities import load_preprocessed_data
+from document_handler import DocumentFactory
 
 FUNCTION_WORD_POS = [
 'DET:ART',
@@ -29,35 +31,6 @@ FUNCTION_WORD_POS = [
 'PRP',
 'PRP:det',
 ]
-
-
-def load_data():
-    print('loading data...')
-    file_paths = [f for f in glob.glob("../data/*.txt")]
-    data = {}
-    for path in file_paths:
-        file = open(path , "rb")
-        print('pickling ', path, '...')
-        data[os.path.basename(path)] = pickle.load(file)
-        file.close()
-    print('done loading data.')
-    return data
-
-
-def generate_documents(input_data_dict):
-    documents = []
-    for file_path, tag_list in input_data_dict.items():
-        label = get_label_from_file_path(file_path)
-        documents.extend([Document(label, tag_list[x:x+1000]) for x in range(0, len(tag_list), 1000)])
-    return documents
-
-
-def get_label_from_file_path(file_path):
-    label = re.search('(?<=-)(.+)(?=-)', file_path)
-    if label is None:
-        return file_path
-    else:
-        return label.group()
 
 
 # code borrowed from https://medium.com/@aneesha/visualising-top-features-in-linear-svm-with-scikit-learn-and-matplotlib-3454ab18a14d
@@ -94,8 +67,8 @@ def relative_function_word_feature(tags):
 
 def main():
 
-    book_data_dict = load_data()
-    documents = generate_documents(book_data_dict)
+    book_data_dict = load_preprocessed_data()
+    documents = DocumentFactory().create_documents(book_data_dict)
 
     text_classifier = Pipeline([
         ('vect', DictVectorizer()),
@@ -104,12 +77,12 @@ def main():
     ])
 
     labels = [doc.label for doc in documents]
-    X = [doc.tag_list for doc in documents]
-    X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.20)
+    X = [doc.tag_sequence for doc in documents]
+    X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.20, random_state=42)
 
     text_classifier.fit(features(X_train), y_train)
     predicted = text_classifier.predict(features(X_test))
-    np.mean(predicted == y_test)
+
     print(metrics.classification_report(y_test, predicted))
     plot_coefficients(text_classifier.named_steps['clf'],
                       text_classifier.named_steps['vect'].get_feature_names())
