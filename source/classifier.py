@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import itertools
 import operator
+import argparse
 
 
 from sklearn import metrics
@@ -11,11 +12,13 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import GridSearchCV
 
 from data_utilities import load_preprocessed_data
 from document_handler import DocumentFactory
 from features import *
 
+SEED = 42
 
 def balance_test_sets(X_test, y_test, test_set_size):
     y_X_tuples = sorted([(y, X) for y, X in zip(y_test, X_test)], key= operator.itemgetter(0))
@@ -35,10 +38,14 @@ def remove_redundant_training_sets(y_test, y_train, X_train):
     return relevant_X, relevant_y
 
 
-def features(tags_list):
+selectable_features = ['func_word', 'skip_gram']
+features_dict = dict(zip(selectable_features, [FunctionWordFeature(), SkipGramFeature()]))
+
+def features(selected_features, tags_list):
     features = []
     for tags in tags_list:
-        features.append(SkipGramFeature().apply(tags))
+        for feature in selected_features:
+            features.append(features_dict[feature].apply(tags))
     return features
 
 
@@ -91,17 +98,25 @@ def plot_confusion_matrix(cm, classes,
     plt.show()
 
 
-def main():
-    SEED = 42
+pipeline = Pipeline([
+        ('vect', DictVectorizer()),
+        ('tfidf', TfidfTransformer(use_idf=False)),
+        ('clf', SGDClassifier(random_state=SEED, penalty='l1', alpha=1e-05, max_iter=50))
+    ])
+
+parameters = {
+    'tfidf__use_idf': (True, False),
+    'clf__alpha': (0.00001, 0.000001),
+    'clf__max_iter': (10, 50, 80),
+}
+
+
+def main(selected_features):
 
     book_data_dict = load_preprocessed_data()
     documents = DocumentFactory().create_documents(book_data_dict)
 
-    text_classifier = Pipeline([
-        ('vect', DictVectorizer()),
-        ('tfidf', TfidfTransformer()),
-        ('clf', SGDClassifier(random_state=SEED, penalty='l1'))
-    ])
+    grid_search = GridSearchCV(pipeline, parameters, cv=5, n_jobs=-1, verbose=-1)
 
     labels = [doc.label for doc in documents]
     X = [doc.tag_sequence for doc in documents]
@@ -109,15 +124,23 @@ def main():
     X_test, y_test = balance_test_sets(X_test, y_test, 20)
     X_train, y_train = remove_redundant_training_sets(y_test, y_train, X_train)
 
-    text_classifier.fit(features(X_train), y_train)
-    y_pred = text_classifier.predict(features(X_test))
+    print('cross-validation begins... ')
+    grid_search.fit(features(selected_features, X_train), y_train)
+    print('cross-validation complete')  # this takes about 5 minutes on my laptop
+    print(grid_search.best_params_)
+    print(grid_search.best_score_)
+
+    y_pred = grid_search.predict(features(selected_features, X_test))
 
     print(metrics.classification_report(y_test, y_pred))
-    plot_coefficients(text_classifier.named_steps['clf'],
-                      text_classifier.named_steps['vect'].get_feature_names())
-
     print(confusion_matrix(y_test, y_pred))
 
 
 if __name__ == "__main__":
-    main()
+
+    parser = argparse.ArgumentParser(description='attempt to classify the authors of some parsed texts')
+    parser.add_argument('selected_features', nargs='+', choices=selectable_features, default='skip_gram',
+                        help='the feature set to analyze')
+    args = parser.parse_args()
+
+    main(args.selected_features)
