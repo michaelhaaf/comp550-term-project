@@ -10,10 +10,11 @@ from sklearn.pipeline import Pipeline
 
 from data_utilities import load_preprocessed_data
 from document_handler import DocumentFactory
-from features import FunctionWordFeature
+from features import *
 
-# code borrowed from https://medium.com/@aneesha/visualising-top-features-in-linear-svm-with-scikit-learn-and-matplotlib-3454ab18a14d
+
 def plot_coefficients(classifier, feature_names, top_features=20):
+    # code borrowed from https://medium.com/@aneesha/visualising-top-features-in-linear-svm-with-scikit-learn-and-matplotlib-3454ab18a14d
     coef = classifier.coef_.ravel()
     top_positive_coefficients = np.argsort(coef)[-top_features:]
     top_negative_coefficients = np.argsort(coef)[:top_features]
@@ -24,7 +25,7 @@ def plot_coefficients(classifier, feature_names, top_features=20):
     plt.bar(np.arange(2 * top_features), coef[top_coefficients], color=colors)
     feature_names = np.array(feature_names)
     plt.xticks(np.arange(1, 1 + 2 * top_features),
-               feature_names[top_coefficients % len(feature_names)],
+               [str(name) for name in feature_names[top_coefficients % len(feature_names)]],
                rotation=60, ha='right')
     plt.show()
 
@@ -32,7 +33,7 @@ def plot_coefficients(classifier, feature_names, top_features=20):
 def features(tags_list):
     features = []
     for tags in tags_list:
-        features.append(FunctionWordFeature().apply(tags))
+        features.append(SkipGramFeature().apply(tags))
     return features
 
 

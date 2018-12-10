@@ -18,13 +18,14 @@ def dump_data_to_files(file_data_dict):
 
 
 def load_preprocessed_data():
-    print('loading data...')
+    print('loading data...', end='')
     file_paths = [f for f in glob.glob("../data/*.txt")]
     input_data_dict = {}
     for path in file_paths:
         file = open(path , "rb")
         input_data_dict[os.path.basename(path)] = pickle.load(file)
         file.close()
+        print('.', end='')
     print('done loading data.')
     return input_data_dict
 
