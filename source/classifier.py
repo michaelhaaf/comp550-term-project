@@ -110,7 +110,6 @@ parameters = {
     'clf__max_iter': (10, 50, 80),
 }
 
-
 def main(selected_features):
 
     book_data_dict = load_preprocessed_data()
@@ -124,14 +123,14 @@ def main(selected_features):
     X_test, y_test = balance_test_sets(X_test, y_test, 20)
     X_train, y_train = remove_redundant_training_sets(y_test, y_train, X_train)
 
-    print('cross-validation begins... ')
+    print('cross-validation begins... (this takes about 5 minutes)')
     grid_search.fit(features(selected_features, X_train), y_train)
-    print('cross-validation complete')  # this takes about 5 minutes on my laptop
-    print(grid_search.best_params_)
-    print(grid_search.best_score_)
+    print('cross-validation complete')
 
     y_pred = grid_search.predict(features(selected_features, X_test))
 
+    print(grid_search.best_params_)
+    print(grid_search.best_score_)
     print(metrics.classification_report(y_test, y_pred))
     print(confusion_matrix(y_test, y_pred))
 
