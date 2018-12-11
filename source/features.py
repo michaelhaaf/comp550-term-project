@@ -1,14 +1,9 @@
 import nltk
-
 from collections import Counter
-
-class Feature:
-
-    def apply(self, tags):
-        raise NotImplementedError
+from sklearn.base import BaseEstimator, TransformerMixin
 
 
-class FunctionWordFeature(Feature):
+class FunctionWordFeature(BaseEstimator, TransformerMixin):
 
     FUNCTION_WORD_POS = [
         'DET:ART',
@@ -32,9 +27,17 @@ class FunctionWordFeature(Feature):
                                 for word in word_counts.keys()}
         return relative_word_counts
 
+    def transform(self, tags_list, y=None):
+        features = []
+        for tags in tags_list:
+            features.append(self.apply(tags))
+        return features
 
-class SkipGramFeature(Feature):
+    def fit(self, tags_list, y=None):
+        return self
 
+
+class SkipGramFeature(BaseEstimator, TransformerMixin):
 
     def apply(self, tags):
         pos_tag_sequence = [tag.pos for tag in tags]
@@ -45,3 +48,12 @@ class SkipGramFeature(Feature):
         relative_skip_gram_counts = {result: finder.ngram_fd[result] / len(finder.ngram_fd)
                                      for result in skip_grams_more_than_once}
         return relative_skip_gram_counts
+
+    def transform(self, tags_list, y=None):
+        features = []
+        for tags in tags_list:
+            features.append(self.apply(tags))
+        return features
+
+    def fit(self, tags_list, y=None):
+        return self

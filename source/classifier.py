@@ -7,7 +7,7 @@ from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.pipeline import Pipeline
+from sklearn.pipeline import Pipeline, FeatureUnion, make_pipeline
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import GridSearchCV
 
@@ -37,20 +37,17 @@ def remove_redundant_training_sets(y_test, y_train, X_train):
 
 selectable_features = ['func_word', 'skip_gram']
 features_dict = dict(zip(selectable_features, [FunctionWordFeature(), SkipGramFeature()]))
-
-def features(selected_features, tags_list):
-    features = []
-    for tags in tags_list:
-        for feature in selected_features:
-            features.append(features_dict[feature].apply(tags))
-    return features
-
-
-pipeline = Pipeline([
-        ('vect', DictVectorizer()),
+def construct_pipeline(selected_features):
+    feature_pipelines = construct_feature_pipelines(selected_features)
+    return Pipeline([
+        ('features', FeatureUnion(feature_pipelines)),
         ('tfidf', TfidfTransformer(use_idf=False)),
-        ('clf', SGDClassifier(random_state=SEED, penalty='l1', alpha=1e-05, max_iter=50))
+        ('clf', SGDClassifier(random_state=SEED, penalty='l1', tol=1e-3))
     ])
+
+
+def construct_feature_pipelines(selected_features):
+    return [(f, make_pipeline(features_dict[f], DictVectorizer())) for f in selected_features]
 
 parameters = {
     'tfidf__use_idf': (True, False),
@@ -58,12 +55,19 @@ parameters = {
     'clf__max_iter': (10, 50, 80),
 }
 
-def main(selected_features):
+
+def main(cmd_args):
 
     book_data_dict = load_preprocessed_data()
     documents = DocumentFactory().create_documents(book_data_dict)
 
+    classifier = None
+    pipeline = construct_pipeline(cmd_args.selected_features)
     grid_search = GridSearchCV(pipeline, parameters, cv=5, n_jobs=-1, verbose=-1)
+    if cmd_args.perform_cv:
+        classifier = grid_search
+    else:
+        classifier = pipeline
 
     labels = [doc.label for doc in documents]
     X = [doc.tag_sequence for doc in documents]
@@ -71,14 +75,15 @@ def main(selected_features):
     X_test, y_test = balance_test_sets(X_test, y_test, 20)
     X_train, y_train = remove_redundant_training_sets(y_test, y_train, X_train)
 
-    print('cross-validation begins... (this takes about 5 minutes)')
-    grid_search.fit(features(selected_features, X_train), y_train)
-    print('cross-validation complete')
+    classifier.fit(X_train, y_train)
 
-    y_pred = grid_search.predict(features(selected_features, X_test))
+    y_pred = classifier.predict(X_test)
 
-    print(grid_search.best_params_)
-    print(grid_search.best_score_)
+    if cmd_args.perform_cv:
+        print(classifier.best_params_)
+        print('overall accuracy: ', classifier.best_score_)
+    else:
+        print('overall accuracy: ', metrics.accuracy_score(y_test, y_pred))
     print(metrics.classification_report(y_test, y_pred))
     print(confusion_matrix(y_test, y_pred))
 
@@ -87,7 +92,9 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='attempt to classify the authors of some parsed texts')
     parser.add_argument('selected_features', nargs='+', choices=selectable_features, default='skip_gram',
-                        help='the feature set to analyze')
+                        help='the feature sets to analyze. selecting more than one will combine all features in parallel')
+    parser.add_argument('--perform_cv', action='store_true',
+                        help='if selected, perform cross-validation. recommended for final results, not for testing')
     args = parser.parse_args()
 
-    main(args.selected_features)
+    main(args)
