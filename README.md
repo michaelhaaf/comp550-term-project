@@ -4,8 +4,10 @@ Author attribution!
 
 Usage instructions:
 
-python ./source/classifier.py skip_gram > ./results/your_output_name.txt
-python ./source/classifier.py func_word > ./results/your_output_name.txt
+cd ./source/
+python3 ./classifier.py skip_gram 
+python3 ./classifier.py func_word 
+python3 ./classifier.py func_word skip_gram 
 
 this script will use the feature set specified by the command-line argument to attempt to classify the authors for segmented chunks of text in the ./data/ folder.
 

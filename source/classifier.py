@@ -63,7 +63,7 @@ def main(cmd_args):
 
     classifier = None
     pipeline = construct_pipeline(cmd_args.selected_features)
-    grid_search = GridSearchCV(pipeline, parameters, cv=5, n_jobs=-1, verbose=-1)
+    grid_search = GridSearchCV(pipeline, parameters, cv=5, n_jobs=-1, verbose=100)
     if cmd_args.perform_cv:
         classifier = grid_search
     else:
