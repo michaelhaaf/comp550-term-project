@@ -1,10 +1,9 @@
-import itertools
 import operator
 import argparse
 
 from sklearn import metrics
 from sklearn.feature_extraction import DictVectorizer
-from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
 from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline, FeatureUnion, make_pipeline
@@ -14,6 +13,7 @@ from sklearn.model_selection import GridSearchCV
 from data_utilities import load_preprocessed_data
 from document_handler import DocumentFactory
 from features import *
+from plot_utilities import *
 
 SEED = 42
 
@@ -35,19 +35,24 @@ def remove_redundant_training_sets(y_test, y_train, X_train):
     return relevant_X, relevant_y
 
 
-selectable_features = ['func_word', 'skip_gram', 'animal_names']
-features_dict = dict(zip(selectable_features, [FunctionWordFeature(), SkipGramFeature(), AnimalNamesFeature()]))
+selectable_features = ['func_word', 'skip_gram', 'short_char_gram', 'long_char_gram']
+features_dict = dict(zip(selectable_features,
+                         [FunctionWordFeature(),
+                          SkipGramFeature(),
+                          CharacterNGramFeature(ngram_range=(2,4)),
+                          CharacterNGramFeature(ngram_range=(4,8))]))
+
 def construct_pipeline(selected_features):
     feature_pipelines = construct_feature_pipelines(selected_features)
     return Pipeline([
         ('features', FeatureUnion(feature_pipelines)),
         ('tfidf', TfidfTransformer(use_idf=False)),
-        ('clf', SGDClassifier(random_state=SEED, penalty='l1', tol=1e-3))
+        ('clf', SGDClassifier(random_state=SEED, penalty='l1', tol=1e-3, verbose=100))
     ])
 
 
 def construct_feature_pipelines(selected_features):
-    return [(f, make_pipeline(features_dict[f], DictVectorizer())) for f in selected_features]
+    return [(f, make_pipeline(features_dict[f], features_dict[f].vectorizer)) for f in selected_features]
 
 parameters = {
     'tfidf__use_idf': (True, False),
@@ -58,12 +63,13 @@ parameters = {
 
 def main(cmd_args):
 
+    pipeline = construct_pipeline(cmd_args.selected_features)
+    grid_search = GridSearchCV(pipeline, parameters, cv=5, n_jobs=-1, verbose=100)
+
     book_data_dict = load_preprocessed_data()
     documents = DocumentFactory().create_documents(book_data_dict)
 
     classifier = None
-    pipeline = construct_pipeline(cmd_args.selected_features)
-    grid_search = GridSearchCV(pipeline, parameters, cv=5, n_jobs=-1, verbose=100)
     if cmd_args.perform_cv:
         classifier = grid_search
     else:
@@ -86,7 +92,7 @@ def main(cmd_args):
         print('overall accuracy: ', metrics.accuracy_score(y_test, y_pred))
     print(metrics.classification_report(y_test, y_pred))
     print(confusion_matrix(y_test, y_pred))
-
+    #plot_coefficients(pipeline.named_steps['clf'])
 
 if __name__ == "__main__":
 

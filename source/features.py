@@ -1,7 +1,9 @@
 import nltk
 from collections import Counter
 from sklearn.base import BaseEstimator, TransformerMixin
-
+from sklearn.feature_extraction import DictVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
+from sacremoses import MosesDetokenizer
 
 class FunctionWordFeature(BaseEstimator, TransformerMixin):
 
@@ -19,6 +21,9 @@ class FunctionWordFeature(BaseEstimator, TransformerMixin):
         'PRP',
         'PRP:det',
     ]
+
+    def __init__(self):
+        self.vectorizer = DictVectorizer()
 
     def apply(self, tags):
         function_words = [tag.lemma for tag in tags if tag.pos in self.FUNCTION_WORD_POS]
@@ -38,6 +43,9 @@ class FunctionWordFeature(BaseEstimator, TransformerMixin):
 
 
 class SkipGramFeature(BaseEstimator, TransformerMixin):
+
+    def __init__(self):
+        self.vectorizer = DictVectorizer()
 
     def apply(self, tags):
         pos_tag_sequence = [tag.pos for tag in tags]
@@ -59,15 +67,40 @@ class SkipGramFeature(BaseEstimator, TransformerMixin):
         return self
 
 
+class CharacterNGramFeature(BaseEstimator, TransformerMixin):
+
+    def __init__(self, ngram_range):
+        self.vectorizer = CountVectorizer(analyzer='char', ngram_range=ngram_range)
+        self.detokenizer = MosesDetokenizer(lang='fr')
+
+    def apply(self, tags):
+        word_sequence = [tag.word for tag in tags]
+        raw_text = self.detokenizer.detokenize(word_sequence)
+        return raw_text
+
+    def transform(self, tags_list, y=None):
+        features = []
+        for tags in tags_list:
+            features.append(self.apply(tags))
+        return features
+
+    def fit(self, tags_list, y=None):
+        return self
+
+
+
+
+
+
 class AnimalNamesFeature(BaseEstimator, TransformerMixin):
 
     ANIMAL_NAMES = [
         'abeille', 'aigle', 'âne', 'animal', 'araignée', 'boeuf', 'canard',
         'cerf', 'chat', 'cheval', 'chèvre', 'chien', 'chouette', 'cochon',
         'coq', 'cygne', 'dragon', 'écureuil', 'éléphant', 'fourmi', 'gibier',
-        'insecte', 'lapin', 'lièvre', 'lion', 'loup', 'moineau', 'mouche', 
+        'insecte', 'lapin', 'lièvre', 'lion', 'loup', 'moineau', 'mouche',
         'mouton', 'oie', 'oiseau', 'ours', 'papillon', 'perroquet', 'pigeon',
-        'poisson', 'poule', 'poulet', 'rat', 'renard', 'rossignol', 'serpent', 
+        'poisson', 'poule', 'poulet', 'rat', 'renard', 'rossignol', 'serpent',
         'singe', 'souris', 'taureau', 'tigre', 'truite', 'vache', 'veau',
     ]
 
