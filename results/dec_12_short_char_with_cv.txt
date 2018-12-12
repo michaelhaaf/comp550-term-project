@@ -1,0 +1,25 @@
+loading data..................................................done loading data.
+Fitting 5 folds for each of 12 candidates, totalling 60 fits
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+Pickling array (shape=(3335,), dtype=int64).
+Pickling array (shape=(841,), dtype=int64).
+Pickling array (shape=(3339,), dtype=int64).
+Pickling array (shape=(837,), dtype=int64).
+Pickling array (shape=(3341,), dtype=int64).
+Pickling array (shape=(835,), dtype=int64).
+[Parallel(n_jobs=-1)]: Done   1 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done   3 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done   4 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done   5 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done   6 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done   7 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done   8 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done   9 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done  10 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done  11 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done  12 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done  13 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done  14 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done  15 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done  16 tasks      | elapsed:  1.4min

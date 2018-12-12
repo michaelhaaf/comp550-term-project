@@ -35,12 +35,14 @@ def remove_redundant_training_sets(y_test, y_train, X_train):
     return relevant_X, relevant_y
 
 
-selectable_features = ['func_word', 'skip_gram', 'short_char_gram', 'long_char_gram']
+selectable_features = ['func_word', 'skip_gram', 'short_char_gram', 'long_char_gram', 'lemma_gram', 'word_gram']
 features_dict = dict(zip(selectable_features,
                          [FunctionWordFeature(),
                           SkipGramFeature(),
                           CharacterNGramFeature(ngram_range=(2,4)),
-                          CharacterNGramFeature(ngram_range=(4,8))]))
+                          CharacterNGramFeature(ngram_range=(4,8)),
+                          TokenNGramLemmatizedFeature(ngram_range=(1,2)),
+                          TokenNGramRawFeature(ngram_range=(1,2))]))
 
 def construct_pipeline(selected_features):
     feature_pipelines = construct_feature_pipelines(selected_features)

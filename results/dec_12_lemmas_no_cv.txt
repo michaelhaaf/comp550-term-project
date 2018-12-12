@@ -1,0 +1,780 @@
+loading data..................................................done loading data.
+[Parallel(n_jobs=1)]: Using backend SequentialBackend with 1 concurrent workers.
+-- Epoch 1
+Norm: 47.36, NNZs: 420, Bias: -0.168346, T: 4176, Avg. loss: 0.088980
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 50.51, NNZs: 103, Bias: -0.210640, T: 8352, Avg. loss: 0.047135
+Total training time: 0.18 seconds.
+-- Epoch 3
+Norm: 51.66, NNZs: 94, Bias: -0.225715, T: 12528, Avg. loss: 0.036921
+Total training time: 0.27 seconds.
+-- Epoch 4
+Norm: 52.71, NNZs: 90, Bias: -0.237217, T: 16704, Avg. loss: 0.030420
+Total training time: 0.37 seconds.
+-- Epoch 5
+Norm: 53.42, NNZs: 85, Bias: -0.241530, T: 20880, Avg. loss: 0.028672
+Total training time: 0.46 seconds.
+-- Epoch 6
+Norm: 53.91, NNZs: 85, Bias: -0.246264, T: 25056, Avg. loss: 0.028750
+Total training time: 0.55 seconds.
+-- Epoch 7
+Norm: 54.38, NNZs: 84, Bias: -0.257269, T: 29232, Avg. loss: 0.027534
+Total training time: 0.64 seconds.
+-- Epoch 8
+Norm: 54.83, NNZs: 83, Bias: -0.269332, T: 33408, Avg. loss: 0.026402
+Total training time: 0.73 seconds.
+-- Epoch 9
+Norm: 55.16, NNZs: 81, Bias: -0.263918, T: 37584, Avg. loss: 0.025284
+Total training time: 0.83 seconds.
+-- Epoch 10
+Norm: 55.49, NNZs: 81, Bias: -0.274110, T: 41760, Avg. loss: 0.025517
+Total training time: 0.92 seconds.
+-- Epoch 11
+Norm: 55.82, NNZs: 81, Bias: -0.280824, T: 45936, Avg. loss: 0.024551
+Total training time: 1.02 seconds.
+-- Epoch 12
+Norm: 56.12, NNZs: 79, Bias: -0.290963, T: 50112, Avg. loss: 0.024345
+Total training time: 1.11 seconds.
+-- Epoch 13
+Norm: 56.38, NNZs: 79, Bias: -0.296346, T: 54288, Avg. loss: 0.023774
+Total training time: 1.20 seconds.
+-- Epoch 14
+Norm: 56.59, NNZs: 80, Bias: -0.292910, T: 58464, Avg. loss: 0.024207
+Total training time: 1.29 seconds.
+Convergence after 14 epochs took 1.29 seconds
+[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:    1.3s remaining:    0.0s
+-- Epoch 1
+Norm: 70.34, NNZs: 3132, Bias: -0.106386, T: 4176, Avg. loss: 0.105704
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 72.74, NNZs: 128, Bias: -0.136939, T: 8352, Avg. loss: 0.027460
+Total training time: 0.18 seconds.
+-- Epoch 3
+Norm: 73.84, NNZs: 110, Bias: -0.162537, T: 12528, Avg. loss: 0.021362
+Total training time: 0.28 seconds.
+-- Epoch 4
+Norm: 74.43, NNZs: 94, Bias: -0.162144, T: 16704, Avg. loss: 0.019275
+Total training time: 0.37 seconds.
+-- Epoch 5
+Norm: 75.00, NNZs: 88, Bias: -0.162898, T: 20880, Avg. loss: 0.018764
+Total training time: 0.46 seconds.
+-- Epoch 6
+Norm: 75.31, NNZs: 85, Bias: -0.187985, T: 25056, Avg. loss: 0.017140
+Total training time: 0.55 seconds.
+-- Epoch 7
+Norm: 75.62, NNZs: 83, Bias: -0.187194, T: 29232, Avg. loss: 0.018229
+Total training time: 0.65 seconds.
+-- Epoch 8
+Norm: 75.89, NNZs: 81, Bias: -0.187007, T: 33408, Avg. loss: 0.017312
+Total training time: 0.74 seconds.
+-- Epoch 9
+Norm: 76.11, NNZs: 81, Bias: -0.189877, T: 37584, Avg. loss: 0.017060
+Total training time: 0.83 seconds.
+-- Epoch 10
+Norm: 76.31, NNZs: 80, Bias: -0.197287, T: 41760, Avg. loss: 0.017091
+Total training time: 0.92 seconds.
+-- Epoch 11
+Norm: 76.52, NNZs: 78, Bias: -0.201454, T: 45936, Avg. loss: 0.016884
+Total training time: 1.01 seconds.
+Convergence after 11 epochs took 1.01 seconds
+[Parallel(n_jobs=1)]: Done   2 out of   2 | elapsed:    2.3s remaining:    0.0s
+-- Epoch 1
+Norm: 69.45, NNZs: 2116, Bias: -0.094550, T: 4176, Avg. loss: 0.220171
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 74.08, NNZs: 205, Bias: -0.159782, T: 8352, Avg. loss: 0.089790
+Total training time: 0.18 seconds.
+-- Epoch 3
+Norm: 76.45, NNZs: 193, Bias: -0.186458, T: 12528, Avg. loss: 0.074136
+Total training time: 0.28 seconds.
+-- Epoch 4
+Norm: 77.94, NNZs: 177, Bias: -0.206262, T: 16704, Avg. loss: 0.063498
+Total training time: 0.38 seconds.
+-- Epoch 5
+Norm: 78.92, NNZs: 173, Bias: -0.215939, T: 20880, Avg. loss: 0.061015
+Total training time: 0.47 seconds.
+-- Epoch 6
+Norm: 79.79, NNZs: 172, Bias: -0.228669, T: 25056, Avg. loss: 0.058156
+Total training time: 0.56 seconds.
+-- Epoch 7
+Norm: 80.51, NNZs: 169, Bias: -0.236159, T: 29232, Avg. loss: 0.055730
+Total training time: 0.65 seconds.
+-- Epoch 8
+Norm: 81.15, NNZs: 168, Bias: -0.237274, T: 33408, Avg. loss: 0.053427
+Total training time: 0.74 seconds.
+-- Epoch 9
+Norm: 81.66, NNZs: 167, Bias: -0.251739, T: 37584, Avg. loss: 0.053084
+Total training time: 0.83 seconds.
+-- Epoch 10
+Norm: 82.14, NNZs: 165, Bias: -0.254392, T: 41760, Avg. loss: 0.052173
+Total training time: 0.92 seconds.
+-- Epoch 11
+Norm: 82.57, NNZs: 164, Bias: -0.261368, T: 45936, Avg. loss: 0.051986
+Total training time: 1.01 seconds.
+-- Epoch 12
+Norm: 82.96, NNZs: 164, Bias: -0.269515, T: 50112, Avg. loss: 0.050401
+Total training time: 1.10 seconds.
+-- Epoch 13
+Norm: 83.32, NNZs: 163, Bias: -0.271266, T: 54288, Avg. loss: 0.050146
+Total training time: 1.19 seconds.
+-- Epoch 14
+Norm: 83.68, NNZs: 157, Bias: -0.271396, T: 58464, Avg. loss: 0.049693
+Total training time: 1.28 seconds.
+-- Epoch 15
+Norm: 83.99, NNZs: 156, Bias: -0.281219, T: 62640, Avg. loss: 0.050037
+Total training time: 1.37 seconds.
+-- Epoch 16
+Norm: 84.30, NNZs: 157, Bias: -0.278266, T: 66816, Avg. loss: 0.049007
+Total training time: 1.46 seconds.
+-- Epoch 17
+Norm: 84.55, NNZs: 157, Bias: -0.286929, T: 70992, Avg. loss: 0.048219
+Total training time: 1.55 seconds.
+Convergence after 17 epochs took 1.55 seconds
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:    3.9s remaining:    0.0s
+-- Epoch 1
+Norm: 41.35, NNZs: 197, Bias: -0.121908, T: 4176, Avg. loss: 0.093630
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 45.44, NNZs: 90, Bias: -0.135965, T: 8352, Avg. loss: 0.050142
+Total training time: 0.18 seconds.
+-- Epoch 3
+Norm: 47.34, NNZs: 87, Bias: -0.154300, T: 12528, Avg. loss: 0.043082
+Total training time: 0.27 seconds.
+-- Epoch 4
+Norm: 48.76, NNZs: 87, Bias: -0.167110, T: 16704, Avg. loss: 0.039195
+Total training time: 0.35 seconds.
+-- Epoch 5
+Norm: 49.70, NNZs: 86, Bias: -0.167818, T: 20880, Avg. loss: 0.035932
+Total training time: 0.44 seconds.
+-- Epoch 6
+Norm: 50.40, NNZs: 83, Bias: -0.181145, T: 25056, Avg. loss: 0.034077
+Total training time: 0.53 seconds.
+-- Epoch 7
+Norm: 51.01, NNZs: 82, Bias: -0.191875, T: 29232, Avg. loss: 0.033435
+Total training time: 0.62 seconds.
+-- Epoch 8
+Norm: 51.50, NNZs: 83, Bias: -0.191967, T: 33408, Avg. loss: 0.033158
+Total training time: 0.72 seconds.
+-- Epoch 9
+Norm: 51.97, NNZs: 82, Bias: -0.200362, T: 37584, Avg. loss: 0.032650
+Total training time: 0.81 seconds.
+-- Epoch 10
+Norm: 52.37, NNZs: 82, Bias: -0.205236, T: 41760, Avg. loss: 0.031423
+Total training time: 0.90 seconds.
+-- Epoch 11
+Norm: 52.71, NNZs: 82, Bias: -0.209677, T: 45936, Avg. loss: 0.031269
+Total training time: 0.99 seconds.
+-- Epoch 12
+Norm: 53.02, NNZs: 83, Bias: -0.207813, T: 50112, Avg. loss: 0.030459
+Total training time: 1.08 seconds.
+-- Epoch 13
+Norm: 53.32, NNZs: 81, Bias: -0.217367, T: 54288, Avg. loss: 0.029901
+Total training time: 1.17 seconds.
+-- Epoch 14
+Norm: 53.59, NNZs: 81, Bias: -0.222447, T: 58464, Avg. loss: 0.029655
+Total training time: 1.26 seconds.
+-- Epoch 15
+Norm: 53.86, NNZs: 81, Bias: -0.216075, T: 62640, Avg. loss: 0.028445
+Total training time: 1.35 seconds.
+-- Epoch 16
+Norm: 54.09, NNZs: 81, Bias: -0.228352, T: 66816, Avg. loss: 0.029357
+Total training time: 1.44 seconds.
+-- Epoch 17
+Norm: 54.30, NNZs: 81, Bias: -0.229678, T: 70992, Avg. loss: 0.028914
+Total training time: 1.53 seconds.
+-- Epoch 18
+Norm: 54.51, NNZs: 81, Bias: -0.232291, T: 75168, Avg. loss: 0.028527
+Total training time: 1.62 seconds.
+-- Epoch 19
+Norm: 54.72, NNZs: 82, Bias: -0.232278, T: 79344, Avg. loss: 0.028332
+Total training time: 1.71 seconds.
+-- Epoch 20
+Norm: 54.91, NNZs: 81, Bias: -0.237106, T: 83520, Avg. loss: 0.028087
+Total training time: 1.81 seconds.
+Convergence after 20 epochs took 1.81 seconds
+[Parallel(n_jobs=1)]: Done   4 out of   4 | elapsed:    5.7s remaining:    0.0s
+-- Epoch 1
+Norm: 34.94, NNZs: 886, Bias: -0.115897, T: 4176, Avg. loss: 0.101352
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 37.15, NNZs: 63, Bias: -0.157090, T: 8352, Avg. loss: 0.057444
+Total training time: 0.18 seconds.
+-- Epoch 3
+Norm: 37.97, NNZs: 60, Bias: -0.173978, T: 12528, Avg. loss: 0.052104
+Total training time: 0.27 seconds.
+-- Epoch 4
+Norm: 38.53, NNZs: 62, Bias: -0.193213, T: 16704, Avg. loss: 0.047074
+Total training time: 0.35 seconds.
+-- Epoch 5
+Norm: 38.92, NNZs: 60, Bias: -0.208197, T: 20880, Avg. loss: 0.045521
+Total training time: 0.44 seconds.
+-- Epoch 6
+Norm: 39.26, NNZs: 58, Bias: -0.224199, T: 25056, Avg. loss: 0.043090
+Total training time: 0.53 seconds.
+-- Epoch 7
+Norm: 39.51, NNZs: 59, Bias: -0.230867, T: 29232, Avg. loss: 0.042185
+Total training time: 0.62 seconds.
+-- Epoch 8
+Norm: 39.71, NNZs: 59, Bias: -0.236947, T: 33408, Avg. loss: 0.042094
+Total training time: 0.71 seconds.
+-- Epoch 9
+Norm: 39.89, NNZs: 59, Bias: -0.245193, T: 37584, Avg. loss: 0.041087
+Total training time: 0.79 seconds.
+-- Epoch 10
+Norm: 40.05, NNZs: 58, Bias: -0.254866, T: 41760, Avg. loss: 0.040824
+Total training time: 0.88 seconds.
+-- Epoch 11
+Norm: 40.20, NNZs: 57, Bias: -0.259170, T: 45936, Avg. loss: 0.039932
+Total training time: 0.97 seconds.
+-- Epoch 12
+Norm: 40.33, NNZs: 57, Bias: -0.263251, T: 50112, Avg. loss: 0.039824
+Total training time: 1.07 seconds.
+-- Epoch 13
+Norm: 40.46, NNZs: 57, Bias: -0.272608, T: 54288, Avg. loss: 0.039471
+Total training time: 1.16 seconds.
+-- Epoch 14
+Norm: 40.56, NNZs: 56, Bias: -0.276052, T: 58464, Avg. loss: 0.039568
+Total training time: 1.25 seconds.
+Convergence after 14 epochs took 1.25 seconds
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:    6.9s remaining:    0.0s
+-- Epoch 1
+Norm: 41.08, NNZs: 1185, Bias: -0.163970, T: 4176, Avg. loss: 0.090923
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 44.27, NNZs: 80, Bias: -0.158404, T: 8352, Avg. loss: 0.043560
+Total training time: 0.18 seconds.
+-- Epoch 3
+Norm: 46.00, NNZs: 78, Bias: -0.185562, T: 12528, Avg. loss: 0.034008
+Total training time: 0.27 seconds.
+-- Epoch 4
+Norm: 47.27, NNZs: 76, Bias: -0.186966, T: 16704, Avg. loss: 0.028734
+Total training time: 0.36 seconds.
+-- Epoch 5
+Norm: 48.07, NNZs: 75, Bias: -0.207851, T: 20880, Avg. loss: 0.028441
+Total training time: 0.45 seconds.
+-- Epoch 6
+Norm: 48.80, NNZs: 75, Bias: -0.215901, T: 25056, Avg. loss: 0.026227
+Total training time: 0.54 seconds.
+-- Epoch 7
+Norm: 49.37, NNZs: 74, Bias: -0.219605, T: 29232, Avg. loss: 0.025319
+Total training time: 0.63 seconds.
+-- Epoch 8
+Norm: 49.89, NNZs: 74, Bias: -0.228879, T: 33408, Avg. loss: 0.023826
+Total training time: 0.72 seconds.
+-- Epoch 9
+Norm: 50.32, NNZs: 73, Bias: -0.234470, T: 37584, Avg. loss: 0.023624
+Total training time: 0.81 seconds.
+-- Epoch 10
+Norm: 50.71, NNZs: 73, Bias: -0.239440, T: 41760, Avg. loss: 0.023170
+Total training time: 0.90 seconds.
+-- Epoch 11
+Norm: 51.04, NNZs: 72, Bias: -0.237546, T: 45936, Avg. loss: 0.022061
+Total training time: 0.99 seconds.
+-- Epoch 12
+Norm: 51.36, NNZs: 72, Bias: -0.249918, T: 50112, Avg. loss: 0.022204
+Total training time: 1.08 seconds.
+-- Epoch 13
+Norm: 51.62, NNZs: 69, Bias: -0.251745, T: 54288, Avg. loss: 0.021886
+Total training time: 1.17 seconds.
+-- Epoch 14
+Norm: 51.88, NNZs: 68, Bias: -0.256902, T: 58464, Avg. loss: 0.021115
+Total training time: 1.26 seconds.
+-- Epoch 15
+Norm: 52.11, NNZs: 68, Bias: -0.261576, T: 62640, Avg. loss: 0.021068
+Total training time: 1.35 seconds.
+-- Epoch 16
+Norm: 52.34, NNZs: 68, Bias: -0.261460, T: 66816, Avg. loss: 0.021031
+Total training time: 1.43 seconds.
+Convergence after 16 epochs took 1.43 seconds
+[Parallel(n_jobs=1)]: Done   6 out of   6 | elapsed:    8.4s remaining:    0.0s
+-- Epoch 1
+Norm: 37.60, NNZs: 938, Bias: -0.124973, T: 4176, Avg. loss: 0.058340
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 41.80, NNZs: 65, Bias: -0.156424, T: 8352, Avg. loss: 0.022950
+Total training time: 0.17 seconds.
+-- Epoch 3
+Norm: 43.54, NNZs: 63, Bias: -0.183088, T: 12528, Avg. loss: 0.019061
+Total training time: 0.26 seconds.
+-- Epoch 4
+Norm: 44.60, NNZs: 60, Bias: -0.179669, T: 16704, Avg. loss: 0.018130
+Total training time: 0.35 seconds.
+-- Epoch 5
+Norm: 45.41, NNZs: 60, Bias: -0.210739, T: 20880, Avg. loss: 0.017467
+Total training time: 0.44 seconds.
+-- Epoch 6
+Norm: 45.97, NNZs: 59, Bias: -0.215024, T: 25056, Avg. loss: 0.016638
+Total training time: 0.53 seconds.
+-- Epoch 7
+Norm: 46.45, NNZs: 59, Bias: -0.232454, T: 29232, Avg. loss: 0.016233
+Total training time: 0.62 seconds.
+-- Epoch 8
+Norm: 46.85, NNZs: 59, Bias: -0.238570, T: 33408, Avg. loss: 0.016008
+Total training time: 0.71 seconds.
+Convergence after 8 epochs took 0.71 seconds
+[Parallel(n_jobs=1)]: Done   7 out of   7 | elapsed:    9.1s remaining:    0.0s
+-- Epoch 1
+Norm: 45.60, NNZs: 805, Bias: -0.099582, T: 4176, Avg. loss: 0.064546
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 48.63, NNZs: 83, Bias: -0.101001, T: 8352, Avg. loss: 0.021287
+Total training time: 0.18 seconds.
+-- Epoch 3
+Norm: 50.05, NNZs: 77, Bias: -0.128745, T: 12528, Avg. loss: 0.018802
+Total training time: 0.28 seconds.
+-- Epoch 4
+Norm: 51.01, NNZs: 69, Bias: -0.134351, T: 16704, Avg. loss: 0.016705
+Total training time: 0.38 seconds.
+-- Epoch 5
+Norm: 51.62, NNZs: 64, Bias: -0.143750, T: 20880, Avg. loss: 0.015683
+Total training time: 0.47 seconds.
+-- Epoch 6
+Norm: 52.19, NNZs: 66, Bias: -0.147393, T: 25056, Avg. loss: 0.014980
+Total training time: 0.57 seconds.
+-- Epoch 7
+Norm: 52.63, NNZs: 64, Bias: -0.150616, T: 29232, Avg. loss: 0.014647
+Total training time: 0.67 seconds.
+-- Epoch 8
+Norm: 52.97, NNZs: 63, Bias: -0.153528, T: 33408, Avg. loss: 0.014095
+Total training time: 0.77 seconds.
+-- Epoch 9
+Norm: 53.30, NNZs: 62, Bias: -0.156325, T: 37584, Avg. loss: 0.014149
+Total training time: 0.86 seconds.
+-- Epoch 10
+Norm: 53.60, NNZs: 59, Bias: -0.158751, T: 41760, Avg. loss: 0.013611
+Total training time: 0.95 seconds.
+Convergence after 10 epochs took 0.95 seconds
+[Parallel(n_jobs=1)]: Done   8 out of   8 | elapsed:   10.1s remaining:    0.0s
+-- Epoch 1
+Norm: 65.21, NNZs: 1614, Bias: -0.179326, T: 4176, Avg. loss: 0.159048
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 70.09, NNZs: 161, Bias: -0.191560, T: 8352, Avg. loss: 0.043568
+Total training time: 0.18 seconds.
+-- Epoch 3
+Norm: 72.07, NNZs: 133, Bias: -0.207704, T: 12528, Avg. loss: 0.026287
+Total training time: 0.27 seconds.
+-- Epoch 4
+Norm: 73.29, NNZs: 124, Bias: -0.212671, T: 16704, Avg. loss: 0.019717
+Total training time: 0.36 seconds.
+-- Epoch 5
+Norm: 74.11, NNZs: 112, Bias: -0.217764, T: 20880, Avg. loss: 0.018358
+Total training time: 0.46 seconds.
+-- Epoch 6
+Norm: 74.78, NNZs: 104, Bias: -0.226117, T: 25056, Avg. loss: 0.016734
+Total training time: 0.55 seconds.
+-- Epoch 7
+Norm: 75.31, NNZs: 97, Bias: -0.232868, T: 29232, Avg. loss: 0.015220
+Total training time: 0.64 seconds.
+-- Epoch 8
+Norm: 75.76, NNZs: 94, Bias: -0.235640, T: 33408, Avg. loss: 0.014920
+Total training time: 0.74 seconds.
+-- Epoch 9
+Norm: 76.15, NNZs: 91, Bias: -0.235895, T: 37584, Avg. loss: 0.014554
+Total training time: 0.83 seconds.
+-- Epoch 10
+Norm: 76.46, NNZs: 87, Bias: -0.241156, T: 41760, Avg. loss: 0.013510
+Total training time: 0.92 seconds.
+-- Epoch 11
+Norm: 76.76, NNZs: 85, Bias: -0.247976, T: 45936, Avg. loss: 0.013346
+Total training time: 1.01 seconds.
+-- Epoch 12
+Norm: 77.03, NNZs: 82, Bias: -0.248134, T: 50112, Avg. loss: 0.013028
+Total training time: 1.10 seconds.
+-- Epoch 13
+Norm: 77.27, NNZs: 82, Bias: -0.253924, T: 54288, Avg. loss: 0.012740
+Total training time: 1.19 seconds.
+-- Epoch 14
+Norm: 77.50, NNZs: 80, Bias: -0.259203, T: 58464, Avg. loss: 0.012931
+Total training time: 1.28 seconds.
+-- Epoch 15
+Norm: 77.70, NNZs: 79, Bias: -0.260816, T: 62640, Avg. loss: 0.012167
+Total training time: 1.37 seconds.
+Convergence after 15 epochs took 1.38 seconds
+[Parallel(n_jobs=1)]: Done   9 out of   9 | elapsed:   11.4s remaining:    0.0s
+-- Epoch 1
+Norm: 52.05, NNZs: 1102, Bias: -0.119701, T: 4176, Avg. loss: 0.058968
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 54.18, NNZs: 101, Bias: -0.120018, T: 8352, Avg. loss: 0.006796
+Total training time: 0.18 seconds.
+-- Epoch 3
+Norm: 55.55, NNZs: 91, Bias: -0.129970, T: 12528, Avg. loss: 0.006910
+Total training time: 0.27 seconds.
+-- Epoch 4
+Norm: 56.31, NNZs: 86, Bias: -0.142591, T: 16704, Avg. loss: 0.006099
+Total training time: 0.36 seconds.
+-- Epoch 5
+Norm: 56.90, NNZs: 81, Bias: -0.142365, T: 20880, Avg. loss: 0.005764
+Total training time: 0.45 seconds.
+-- Epoch 6
+Norm: 57.31, NNZs: 79, Bias: -0.142546, T: 25056, Avg. loss: 0.004646
+Total training time: 0.54 seconds.
+-- Epoch 7
+Norm: 57.69, NNZs: 76, Bias: -0.146261, T: 29232, Avg. loss: 0.005311
+Total training time: 0.63 seconds.
+-- Epoch 8
+Norm: 58.00, NNZs: 74, Bias: -0.146610, T: 33408, Avg. loss: 0.005062
+Total training time: 0.71 seconds.
+-- Epoch 9
+Norm: 58.26, NNZs: 73, Bias: -0.152267, T: 37584, Avg. loss: 0.004736
+Total training time: 0.80 seconds.
+-- Epoch 10
+Norm: 58.51, NNZs: 73, Bias: -0.154684, T: 41760, Avg. loss: 0.005156
+Total training time: 0.89 seconds.
+-- Epoch 11
+Norm: 58.74, NNZs: 73, Bias: -0.156863, T: 45936, Avg. loss: 0.005179
+Total training time: 0.97 seconds.
+Convergence after 11 epochs took 0.98 seconds
+[Parallel(n_jobs=1)]: Done  10 out of  10 | elapsed:   12.4s remaining:    0.0s
+-- Epoch 1
+Norm: 93.16, NNZs: 3798, Bias: 0.006782, T: 4176, Avg. loss: 0.416091
+Total training time: 0.10 seconds.
+-- Epoch 2
+Norm: 99.43, NNZs: 375, Bias: -0.015401, T: 8352, Avg. loss: 0.177441
+Total training time: 0.19 seconds.
+-- Epoch 3
+Norm: 102.46, NNZs: 346, Bias: 0.004551, T: 12528, Avg. loss: 0.133808
+Total training time: 0.28 seconds.
+-- Epoch 4
+Norm: 104.57, NNZs: 317, Bias: 0.003700, T: 16704, Avg. loss: 0.117453
+Total training time: 0.38 seconds.
+-- Epoch 5
+Norm: 106.17, NNZs: 308, Bias: 0.003698, T: 20880, Avg. loss: 0.109747
+Total training time: 0.47 seconds.
+-- Epoch 6
+Norm: 107.44, NNZs: 300, Bias: 0.008177, T: 25056, Avg. loss: 0.104004
+Total training time: 0.57 seconds.
+-- Epoch 7
+Norm: 108.49, NNZs: 297, Bias: 0.005011, T: 29232, Avg. loss: 0.098715
+Total training time: 0.66 seconds.
+-- Epoch 8
+Norm: 109.34, NNZs: 290, Bias: 0.011268, T: 33408, Avg. loss: 0.097633
+Total training time: 0.76 seconds.
+-- Epoch 9
+Norm: 110.14, NNZs: 285, Bias: 0.011300, T: 37584, Avg. loss: 0.094416
+Total training time: 0.85 seconds.
+-- Epoch 10
+Norm: 110.85, NNZs: 280, Bias: 0.008909, T: 41760, Avg. loss: 0.093239
+Total training time: 0.94 seconds.
+-- Epoch 11
+Norm: 111.47, NNZs: 275, Bias: 0.013445, T: 45936, Avg. loss: 0.093203
+Total training time: 1.03 seconds.
+-- Epoch 12
+Norm: 112.04, NNZs: 273, Bias: 0.009516, T: 50112, Avg. loss: 0.089569
+Total training time: 1.12 seconds.
+-- Epoch 13
+Norm: 112.56, NNZs: 269, Bias: 0.011598, T: 54288, Avg. loss: 0.091182
+Total training time: 1.21 seconds.
+-- Epoch 14
+Norm: 113.02, NNZs: 268, Bias: 0.011756, T: 58464, Avg. loss: 0.091367
+Total training time: 1.31 seconds.
+-- Epoch 15
+Norm: 113.45, NNZs: 266, Bias: 0.007034, T: 62640, Avg. loss: 0.089562
+Total training time: 1.40 seconds.
+-- Epoch 16
+Norm: 113.85, NNZs: 264, Bias: 0.011731, T: 66816, Avg. loss: 0.088533
+Total training time: 1.49 seconds.
+-- Epoch 17
+Norm: 114.24, NNZs: 257, Bias: 0.011803, T: 70992, Avg. loss: 0.087723
+Total training time: 1.59 seconds.
+-- Epoch 18
+Norm: 114.58, NNZs: 256, Bias: 0.013167, T: 75168, Avg. loss: 0.087395
+Total training time: 1.68 seconds.
+-- Epoch 19
+Norm: 114.92, NNZs: 258, Bias: 0.009450, T: 79344, Avg. loss: 0.088677
+Total training time: 1.77 seconds.
+-- Epoch 20
+Norm: 115.25, NNZs: 259, Bias: 0.008365, T: 83520, Avg. loss: 0.087142
+Total training time: 1.86 seconds.
+-- Epoch 21
+Norm: 115.56, NNZs: 259, Bias: 0.009637, T: 87696, Avg. loss: 0.085447
+Total training time: 1.95 seconds.
+-- Epoch 22
+Norm: 115.86, NNZs: 257, Bias: 0.012909, T: 91872, Avg. loss: 0.086264
+Total training time: 2.04 seconds.
+-- Epoch 23
+Norm: 116.14, NNZs: 258, Bias: 0.009687, T: 96048, Avg. loss: 0.086203
+Total training time: 2.14 seconds.
+-- Epoch 24
+Norm: 116.40, NNZs: 258, Bias: 0.005732, T: 100224, Avg. loss: 0.085395
+Total training time: 2.23 seconds.
+-- Epoch 25
+Norm: 116.64, NNZs: 258, Bias: 0.007793, T: 104400, Avg. loss: 0.085466
+Total training time: 2.32 seconds.
+-- Epoch 26
+Norm: 116.87, NNZs: 255, Bias: 0.005089, T: 108576, Avg. loss: 0.084671
+Total training time: 2.41 seconds.
+Convergence after 26 epochs took 2.41 seconds
+[Parallel(n_jobs=1)]: Done  11 out of  11 | elapsed:   14.8s remaining:    0.0s
+-- Epoch 1
+Norm: 53.88, NNZs: 1592, Bias: -0.078062, T: 4176, Avg. loss: 0.155848
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 58.15, NNZs: 134, Bias: -0.058429, T: 8352, Avg. loss: 0.073149
+Total training time: 0.18 seconds.
+-- Epoch 3
+Norm: 60.58, NNZs: 131, Bias: -0.040936, T: 12528, Avg. loss: 0.059963
+Total training time: 0.28 seconds.
+-- Epoch 4
+Norm: 62.09, NNZs: 130, Bias: -0.041731, T: 16704, Avg. loss: 0.054687
+Total training time: 0.37 seconds.
+-- Epoch 5
+Norm: 63.22, NNZs: 130, Bias: -0.037980, T: 20880, Avg. loss: 0.048154
+Total training time: 0.46 seconds.
+-- Epoch 6
+Norm: 64.15, NNZs: 129, Bias: -0.042595, T: 25056, Avg. loss: 0.045244
+Total training time: 0.55 seconds.
+-- Epoch 7
+Norm: 64.94, NNZs: 126, Bias: -0.046342, T: 29232, Avg. loss: 0.043449
+Total training time: 0.64 seconds.
+-- Epoch 8
+Norm: 65.65, NNZs: 126, Bias: -0.043322, T: 33408, Avg. loss: 0.041528
+Total training time: 0.73 seconds.
+-- Epoch 9
+Norm: 66.27, NNZs: 127, Bias: -0.043658, T: 37584, Avg. loss: 0.040483
+Total training time: 0.82 seconds.
+-- Epoch 10
+Norm: 66.79, NNZs: 126, Bias: -0.051105, T: 41760, Avg. loss: 0.039030
+Total training time: 0.90 seconds.
+-- Epoch 11
+Norm: 67.29, NNZs: 124, Bias: -0.050947, T: 45936, Avg. loss: 0.037917
+Total training time: 0.99 seconds.
+-- Epoch 12
+Norm: 67.74, NNZs: 124, Bias: -0.046895, T: 50112, Avg. loss: 0.037775
+Total training time: 1.08 seconds.
+-- Epoch 13
+Norm: 68.15, NNZs: 122, Bias: -0.052425, T: 54288, Avg. loss: 0.037127
+Total training time: 1.17 seconds.
+-- Epoch 14
+Norm: 68.54, NNZs: 121, Bias: -0.050568, T: 58464, Avg. loss: 0.036652
+Total training time: 1.27 seconds.
+-- Epoch 15
+Norm: 68.89, NNZs: 121, Bias: -0.050559, T: 62640, Avg. loss: 0.036209
+Total training time: 1.36 seconds.
+-- Epoch 16
+Norm: 69.20, NNZs: 120, Bias: -0.047573, T: 66816, Avg. loss: 0.035812
+Total training time: 1.45 seconds.
+Convergence after 16 epochs took 1.45 seconds
+[Parallel(n_jobs=1)]: Done  12 out of  12 | elapsed:   16.3s remaining:    0.0s
+-- Epoch 1
+Norm: 67.09, NNZs: 1310, Bias: -0.267043, T: 4176, Avg. loss: 0.135981
+Total training time: 0.10 seconds.
+-- Epoch 2
+Norm: 70.39, NNZs: 158, Bias: -0.286634, T: 8352, Avg. loss: 0.040906
+Total training time: 0.19 seconds.
+-- Epoch 3
+Norm: 71.80, NNZs: 142, Bias: -0.323665, T: 12528, Avg. loss: 0.033213
+Total training time: 0.28 seconds.
+-- Epoch 4
+Norm: 72.75, NNZs: 129, Bias: -0.324630, T: 16704, Avg. loss: 0.031220
+Total training time: 0.37 seconds.
+-- Epoch 5
+Norm: 73.51, NNZs: 127, Bias: -0.346175, T: 20880, Avg. loss: 0.027895
+Total training time: 0.46 seconds.
+-- Epoch 6
+Norm: 74.18, NNZs: 122, Bias: -0.347309, T: 25056, Avg. loss: 0.026423
+Total training time: 0.55 seconds.
+-- Epoch 7
+Norm: 74.65, NNZs: 118, Bias: -0.362270, T: 29232, Avg. loss: 0.025398
+Total training time: 0.64 seconds.
+-- Epoch 8
+Norm: 75.07, NNZs: 115, Bias: -0.368620, T: 33408, Avg. loss: 0.025100
+Total training time: 0.73 seconds.
+-- Epoch 9
+Norm: 75.40, NNZs: 112, Bias: -0.371703, T: 37584, Avg. loss: 0.025208
+Total training time: 0.82 seconds.
+-- Epoch 10
+Norm: 75.72, NNZs: 111, Bias: -0.379257, T: 41760, Avg. loss: 0.024461
+Total training time: 0.91 seconds.
+-- Epoch 11
+Norm: 76.03, NNZs: 110, Bias: -0.379530, T: 45936, Avg. loss: 0.023662
+Total training time: 1.00 seconds.
+-- Epoch 12
+Norm: 76.31, NNZs: 105, Bias: -0.385981, T: 50112, Avg. loss: 0.024051
+Total training time: 1.08 seconds.
+Convergence after 12 epochs took 1.09 seconds
+[Parallel(n_jobs=1)]: Done  13 out of  13 | elapsed:   17.4s remaining:    0.0s
+-- Epoch 1
+Norm: 47.58, NNZs: 489, Bias: -0.135698, T: 4176, Avg. loss: 0.079846
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 50.84, NNZs: 87, Bias: -0.146660, T: 8352, Avg. loss: 0.035319
+Total training time: 0.17 seconds.
+-- Epoch 3
+Norm: 52.52, NNZs: 79, Bias: -0.157644, T: 12528, Avg. loss: 0.024339
+Total training time: 0.26 seconds.
+-- Epoch 4
+Norm: 53.51, NNZs: 78, Bias: -0.172231, T: 16704, Avg. loss: 0.020953
+Total training time: 0.35 seconds.
+-- Epoch 5
+Norm: 54.14, NNZs: 74, Bias: -0.186897, T: 20880, Avg. loss: 0.019891
+Total training time: 0.43 seconds.
+-- Epoch 6
+Norm: 54.68, NNZs: 73, Bias: -0.190699, T: 25056, Avg. loss: 0.018410
+Total training time: 0.52 seconds.
+-- Epoch 7
+Norm: 55.18, NNZs: 71, Bias: -0.197717, T: 29232, Avg. loss: 0.018037
+Total training time: 0.61 seconds.
+-- Epoch 8
+Norm: 55.61, NNZs: 70, Bias: -0.197750, T: 33408, Avg. loss: 0.017112
+Total training time: 0.69 seconds.
+-- Epoch 9
+Norm: 55.97, NNZs: 66, Bias: -0.206221, T: 37584, Avg. loss: 0.016738
+Total training time: 0.78 seconds.
+-- Epoch 10
+Norm: 56.32, NNZs: 65, Bias: -0.211182, T: 41760, Avg. loss: 0.016307
+Total training time: 0.87 seconds.
+-- Epoch 11
+Norm: 56.62, NNZs: 65, Bias: -0.215677, T: 45936, Avg. loss: 0.015994
+Total training time: 0.95 seconds.
+Convergence after 11 epochs took 0.95 seconds
+[Parallel(n_jobs=1)]: Done  14 out of  14 | elapsed:   18.3s remaining:    0.0s
+-- Epoch 1
+Norm: 40.80, NNZs: 1239, Bias: -0.082979, T: 4176, Avg. loss: 0.077629
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 45.92, NNZs: 63, Bias: -0.094611, T: 8352, Avg. loss: 0.032437
+Total training time: 0.17 seconds.
+-- Epoch 3
+Norm: 48.10, NNZs: 64, Bias: -0.103955, T: 12528, Avg. loss: 0.023785
+Total training time: 0.26 seconds.
+-- Epoch 4
+Norm: 49.56, NNZs: 65, Bias: -0.103655, T: 16704, Avg. loss: 0.019111
+Total training time: 0.35 seconds.
+-- Epoch 5
+Norm: 50.58, NNZs: 65, Bias: -0.105386, T: 20880, Avg. loss: 0.018803
+Total training time: 0.43 seconds.
+-- Epoch 6
+Norm: 51.38, NNZs: 63, Bias: -0.119036, T: 25056, Avg. loss: 0.016984
+Total training time: 0.52 seconds.
+-- Epoch 7
+Norm: 52.03, NNZs: 63, Bias: -0.129619, T: 29232, Avg. loss: 0.016066
+Total training time: 0.61 seconds.
+-- Epoch 8
+Norm: 52.61, NNZs: 62, Bias: -0.129153, T: 33408, Avg. loss: 0.015951
+Total training time: 0.69 seconds.
+-- Epoch 9
+Norm: 53.10, NNZs: 61, Bias: -0.134434, T: 37584, Avg. loss: 0.014819
+Total training time: 0.78 seconds.
+-- Epoch 10
+Norm: 53.56, NNZs: 61, Bias: -0.136770, T: 41760, Avg. loss: 0.014700
+Total training time: 0.87 seconds.
+-- Epoch 11
+Norm: 53.93, NNZs: 62, Bias: -0.138992, T: 45936, Avg. loss: 0.013605
+Total training time: 0.96 seconds.
+-- Epoch 12
+Norm: 54.27, NNZs: 61, Bias: -0.143076, T: 50112, Avg. loss: 0.013040
+Total training time: 1.05 seconds.
+-- Epoch 13
+Norm: 54.57, NNZs: 61, Bias: -0.148610, T: 54288, Avg. loss: 0.012929
+Total training time: 1.14 seconds.
+-- Epoch 14
+Norm: 54.83, NNZs: 61, Bias: -0.146752, T: 58464, Avg. loss: 0.012725
+Total training time: 1.23 seconds.
+-- Epoch 15
+Norm: 55.08, NNZs: 62, Bias: -0.146836, T: 62640, Avg. loss: 0.012686
+Total training time: 1.31 seconds.
+-- Epoch 16
+Norm: 55.29, NNZs: 62, Bias: -0.150020, T: 66816, Avg. loss: 0.012595
+Total training time: 1.40 seconds.
+Convergence after 16 epochs took 1.40 seconds
+[Parallel(n_jobs=1)]: Done  15 out of  15 | elapsed:   19.7s remaining:    0.0s
+-- Epoch 1
+Norm: 97.65, NNZs: 4443, Bias: -0.383322, T: 4176, Avg. loss: 0.404818
+Total training time: 0.09 seconds.
+-- Epoch 2
+Norm: 104.72, NNZs: 466, Bias: -0.490930, T: 8352, Avg. loss: 0.117333
+Total training time: 0.19 seconds.
+-- Epoch 3
+Norm: 108.16, NNZs: 407, Bias: -0.532627, T: 12528, Avg. loss: 0.082154
+Total training time: 0.28 seconds.
+-- Epoch 4
+Norm: 110.33, NNZs: 384, Bias: -0.556729, T: 16704, Avg. loss: 0.068337
+Total training time: 0.37 seconds.
+-- Epoch 5
+Norm: 111.92, NNZs: 375, Bias: -0.571574, T: 20880, Avg. loss: 0.062046
+Total training time: 0.47 seconds.
+-- Epoch 6
+Norm: 113.17, NNZs: 362, Bias: -0.596631, T: 25056, Avg. loss: 0.058726
+Total training time: 0.56 seconds.
+-- Epoch 7
+Norm: 114.24, NNZs: 353, Bias: -0.614148, T: 29232, Avg. loss: 0.054628
+Total training time: 0.65 seconds.
+-- Epoch 8
+Norm: 115.21, NNZs: 342, Bias: -0.620077, T: 33408, Avg. loss: 0.053869
+Total training time: 0.74 seconds.
+-- Epoch 9
+Norm: 116.05, NNZs: 335, Bias: -0.631062, T: 37584, Avg. loss: 0.052124
+Total training time: 0.84 seconds.
+-- Epoch 10
+Norm: 116.79, NNZs: 331, Bias: -0.636190, T: 41760, Avg. loss: 0.049923
+Total training time: 0.93 seconds.
+-- Epoch 11
+Norm: 117.40, NNZs: 324, Bias: -0.651915, T: 45936, Avg. loss: 0.050237
+Total training time: 1.02 seconds.
+-- Epoch 12
+Norm: 118.00, NNZs: 318, Bias: -0.659975, T: 50112, Avg. loss: 0.050023
+Total training time: 1.11 seconds.
+-- Epoch 13
+Norm: 118.51, NNZs: 316, Bias: -0.662007, T: 54288, Avg. loss: 0.048557
+Total training time: 1.21 seconds.
+-- Epoch 14
+Norm: 118.98, NNZs: 316, Bias: -0.672692, T: 58464, Avg. loss: 0.049023
+Total training time: 1.30 seconds.
+-- Epoch 15
+Norm: 119.45, NNZs: 315, Bias: -0.679271, T: 62640, Avg. loss: 0.048408
+Total training time: 1.39 seconds.
+-- Epoch 16
+Norm: 119.87, NNZs: 311, Bias: -0.685455, T: 66816, Avg. loss: 0.047518
+Total training time: 1.48 seconds.
+-- Epoch 17
+Norm: 120.29, NNZs: 306, Bias: -0.691177, T: 70992, Avg. loss: 0.047493
+Total training time: 1.58 seconds.
+-- Epoch 18
+Norm: 120.66, NNZs: 306, Bias: -0.696603, T: 75168, Avg. loss: 0.047619
+Total training time: 1.67 seconds.
+Convergence after 18 epochs took 1.67 seconds
+[Parallel(n_jobs=1)]: Done  16 out of  16 | elapsed:   21.4s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  16 out of  16 | elapsed:   21.4s finished
+overall accuracy:  0.921875
+                         precision    recall  f1-score   support
+
+             Andre Gide       0.85      0.85      0.85        20
+                 Celine       0.95      1.00      0.98        20
+                Colette       0.95      1.00      0.98        20
+              Giraudoux       1.00      0.90      0.95        20
+        Gobineau Joseph       1.00      0.50      0.67        20
+               Huysmans       0.94      0.75      0.83        20
+             Jean Giono       1.00      0.95      0.97        20
+       Jean Paul Sartre       1.00      0.85      0.92        20
+         Joseph Malegue       1.00      1.00      1.00        20
+            Jules Verne       0.95      1.00      0.98        20
+             Maupassant       0.74      1.00      0.85        20
+Maxence Van Der Meersch       1.00      0.95      0.97        20
+                 Proust       0.80      1.00      0.89        20
+     Simone de Beauvoir       1.00      1.00      1.00        20
+                Vogüé       0.95      1.00      0.98        20
+                   Zola       0.80      1.00      0.89        20
+
+              micro avg       0.92      0.92      0.92       320
+              macro avg       0.93      0.92      0.92       320
+           weighted avg       0.93      0.92      0.92       320
+
+[[17  0  0  0  0  0  0  0  0  0  0  0  3  0  0  0]
+ [ 0 20  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0 20  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0 18  0  0  0  0  0  0  1  0  1  0  0  0]
+ [ 1  0  1  0 10  1  0  0  0  1  3  0  1  0  0  2]
+ [ 1  0  0  0  0 15  0  0  0  0  2  0  0  0  0  2]
+ [ 0  0  0  0  0  0 19  0  0  0  0  0  0  0  1  0]
+ [ 1  0  0  0  0  0  0 17  0  0  1  0  0  0  0  1]
+ [ 0  0  0  0  0  0  0  0 20  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0 20  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0 20  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0  0  0  0 19  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0 20  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0 20  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0 20  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 20]]

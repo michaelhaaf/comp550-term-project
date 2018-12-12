@@ -88,6 +88,47 @@ class CharacterNGramFeature(BaseEstimator, TransformerMixin):
         return self
 
 
+class TokenNGramLemmatizedFeature(BaseEstimator, TransformerMixin):
+
+    def __init__(self, ngram_range):
+        self.vectorizer = CountVectorizer(analyzer='word', ngram_range=ngram_range)
+        self.detokenizer = MosesDetokenizer(lang='fr')
+
+    def apply(self, tags):
+        lemmas = [tag.lemma for tag in tags]
+        raw_text = self.detokenizer.detokenize(lemmas)
+        return raw_text
+
+    def transform(self, tags_list, y=None):
+        features = []
+        for tags in tags_list:
+            features.append(self.apply(tags))
+        return features
+
+    def fit(self, tags_list, y=None):
+        return self
+        
+        
+class TokenNGramRawFeature(BaseEstimator, TransformerMixin):
+
+    def __init__(self, ngram_range):
+        self.vectorizer = CountVectorizer(analyzer='word', ngram_range=ngram_range)
+        self.detokenizer = MosesDetokenizer(lang='fr')
+
+    def apply(self, tags):
+        words = [tag.word for tag in tags]
+        raw_text = self.detokenizer.detokenize(words)
+        return raw_text
+
+    def transform(self, tags_list, y=None):
+        features = []
+        for tags in tags_list:
+            features.append(self.apply(tags))
+        return features
+
+    def fit(self, tags_list, y=None):
+        return self
+
 
 
 
