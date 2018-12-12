@@ -35,8 +35,8 @@ def remove_redundant_training_sets(y_test, y_train, X_train):
     return relevant_X, relevant_y
 
 
-selectable_features = ['func_word', 'skip_gram']
-features_dict = dict(zip(selectable_features, [FunctionWordFeature(), SkipGramFeature()]))
+selectable_features = ['func_word', 'skip_gram', 'animal_names']
+features_dict = dict(zip(selectable_features, [FunctionWordFeature(), SkipGramFeature(), AnimalNamesFeature()]))
 def construct_pipeline(selected_features):
     feature_pipelines = construct_feature_pipelines(selected_features)
     return Pipeline([

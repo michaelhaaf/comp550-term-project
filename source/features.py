@@ -57,3 +57,32 @@ class SkipGramFeature(BaseEstimator, TransformerMixin):
 
     def fit(self, tags_list, y=None):
         return self
+
+
+class AnimalNamesFeature(BaseEstimator, TransformerMixin):
+
+    ANIMAL_NAMES = [
+        'abeille', 'aigle', 'âne', 'animal', 'araignée', 'boeuf', 'canard',
+        'cerf', 'chat', 'cheval', 'chèvre', 'chien', 'chouette', 'cochon',
+        'coq', 'cygne', 'dragon', 'écureuil', 'éléphant', 'fourmi', 'gibier',
+        'insecte', 'lapin', 'lièvre', 'lion', 'loup', 'moineau', 'mouche', 
+        'mouton', 'oie', 'oiseau', 'ours', 'papillon', 'perroquet', 'pigeon',
+        'poisson', 'poule', 'poulet', 'rat', 'renard', 'rossignol', 'serpent', 
+        'singe', 'souris', 'taureau', 'tigre', 'truite', 'vache', 'veau',
+    ]
+
+    def apply(self, tags):
+        animals = [tag.lemma for tag in tags if tag.lemma in self.ANIMAL_NAMES]
+        word_counts = dict(Counter(animals))
+        relative_word_counts = {word: word_counts[word]
+                                for word in word_counts.keys()}
+        return relative_word_counts
+
+    def transform(self, tags_list, y=None):
+        features = []
+        for tags in tags_list:
+            features.append(self.apply(tags))
+        return features
+
+    def fit(self, tags_list, y=None):
+        return self
