@@ -94,7 +94,13 @@ def main(cmd_args):
         print('overall accuracy: ', metrics.accuracy_score(y_test, y_pred))
     print(metrics.classification_report(y_test, y_pred))
     print(confusion_matrix(y_test, y_pred))
-    #plot_coefficients(pipeline.named_steps['clf'])
+    plot_coefficients(pipeline.named_steps['clf'],
+                      get_feature_names_from_pipeline(pipeline))
+
+
+def get_feature_names_from_pipeline(pipeline):
+    return list(pipeline.named_steps['features'].transformer_list[0][1].named_steps.values())[1].feature_names_
+
 
 if __name__ == "__main__":
 
