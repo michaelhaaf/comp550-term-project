@@ -1,0 +1,22 @@
+                         precision    recall  f1-score   support
+
+             Andre Gide       0.81      0.85      0.83        20
+                 Celine       0.95      0.95      0.95        20
+                Colette       0.89      0.80      0.84        20
+              Giraudoux       1.00      0.70      0.82        20
+        Gobineau Joseph       0.88      0.75      0.81        20
+               Huysmans       1.00      0.90      0.95        20
+             Jean Giono       0.95      0.90      0.92        20
+       Jean Paul Sartre       1.00      0.90      0.95        20
+         Joseph Malegue       0.94      0.80      0.86        20
+            Jules Verne       1.00      0.95      0.97        20
+             Maupassant       0.59      0.95      0.73        20
+Maxence Van Der Meersch       1.00      0.95      0.97        20
+                 Proust       0.87      1.00      0.93        20
+     Simone de Beauvoir       0.95      0.90      0.92        20
+                  Vogüé       0.91      1.00      0.95        20
+                   Zola       0.83      1.00      0.91        20
+
+              micro avg       0.89      0.89      0.89       320
+              macro avg       0.91      0.89      0.90       320
+           weighted avg       0.91      0.89      0.90       320
