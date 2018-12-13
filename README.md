@@ -5,6 +5,7 @@ Author attribution!
 Usage instructions:
 
 cd ./source/
+
 python3 ./classifier.py skip_gram 
 
 python3 ./classifier.py func_word 
