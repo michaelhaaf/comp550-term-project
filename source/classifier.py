@@ -49,7 +49,7 @@ def construct_pipeline(selected_features):
     return Pipeline([
         ('features', FeatureUnion(feature_pipelines)),
         ('tfidf', TfidfTransformer(use_idf=False)),
-        ('clf', SGDClassifier(random_state=SEED, penalty='l1', tol=1e-3, verbose=100))
+        ('clf', SGDClassifier(random_state=SEED, penalty='l1', tol=1e-3, alpha=1e-05, max_iter=80, verbose=100)) 
     ])
 
 
@@ -99,7 +99,7 @@ def main(cmd_args):
 
 
 def get_feature_names_from_pipeline(pipeline):
-    return list(pipeline.named_steps['features'].transformer_list[0][1].named_steps.values())[1].feature_names_
+    return list(pipeline.named_steps['features'].transformer_list[0][1].named_steps.values())[1].get_feature_names()
 
 
 if __name__ == "__main__":

@@ -74,7 +74,7 @@ class CharacterNGramFeature(BaseEstimator, TransformerMixin):
         self.detokenizer = MosesDetokenizer(lang='fr')
 
     def apply(self, tags):
-        word_sequence = [tag.word for tag in tags]
+        word_sequence = [tag.word for tag in tags if tag.pos not in ['NAM']]
         raw_text = self.detokenizer.detokenize(word_sequence)
         return raw_text
 
@@ -95,7 +95,7 @@ class TokenNGramLemmatizedFeature(BaseEstimator, TransformerMixin):
         self.detokenizer = MosesDetokenizer(lang='fr')
 
     def apply(self, tags):
-        lemmas = [tag.lemma for tag in tags]
+        lemmas = [tag.lemma for tag in tags if tag.pos not in ['NAM']]
         raw_text = self.detokenizer.detokenize(lemmas)
         return raw_text
 
@@ -116,7 +116,7 @@ class TokenNGramRawFeature(BaseEstimator, TransformerMixin):
         self.detokenizer = MosesDetokenizer(lang='fr')
 
     def apply(self, tags):
-        words = [tag.word for tag in tags]
+        words = [tag.word for tag in tags if tag.pos not in ['NAM']]
         raw_text = self.detokenizer.detokenize(words)
         return raw_text
 
