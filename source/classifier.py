@@ -2,8 +2,8 @@ import operator
 import argparse
 
 from sklearn import metrics
-from sklearn.feature_extraction import DictVectorizer
-from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
+from sklearn.dummy import DummyClassifier
+from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline, FeatureUnion, make_pipeline
@@ -65,23 +65,27 @@ parameters = {
 
 def main(cmd_args):
 
-    pipeline = construct_pipeline(cmd_args.selected_features)
-    grid_search = GridSearchCV(pipeline, parameters, cv=5, n_jobs=-1, verbose=100)
 
     book_data_dict = load_preprocessed_data()
     documents = DocumentFactory().create_documents(book_data_dict)
-
-    classifier = None
-    if cmd_args.perform_cv:
-        classifier = grid_search
-    else:
-        classifier = pipeline
 
     labels = [doc.label for doc in documents]
     X = [doc.tag_sequence for doc in documents]
     X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.20, random_state=SEED)
     X_test, y_test = balance_test_sets(X_test, y_test, 20)
     X_train, y_train = remove_redundant_training_sets(y_test, y_train, X_train)
+
+    pipeline = construct_pipeline(cmd_args.selected_features)
+    grid_search = GridSearchCV(pipeline, parameters, cv=5, n_jobs=-1, verbose=100)
+    baseline = DummyClassifier(strategy='prior')
+
+    classifier = None
+    if cmd_args.perform_cv:
+        classifier = grid_search
+    elif cmd_args.baseline:
+        classifier = baseline
+    else:
+        classifier = pipeline
 
     classifier.fit(X_train, y_train)
 
@@ -109,6 +113,8 @@ if __name__ == "__main__":
                         help='the feature sets to analyze. selecting more than one will combine all features in parallel')
     parser.add_argument('--perform_cv', action='store_true',
                         help='if selected, perform cross-validation. recommended for final results, not for testing')
+    parser.add_argument('--baseline', action='store_true',
+                        help='if selected, use baseline classifiers instead of the real classifiers')
     args = parser.parse_args()
 
     main(args)
